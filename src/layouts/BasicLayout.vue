@@ -8,7 +8,9 @@
         <router-view />
       </a-layout-content>
       <a-layout-footer class="footer">
-        <a href="https://github.com/BobW7" target="_blank"> BobOJ by BobW7</a>
+        <a href="https://github.com/BobW7" target="_blank">
+          项目标识或作者链接</a
+        >
       </a-layout-footer>
     </a-layout>
   </div>

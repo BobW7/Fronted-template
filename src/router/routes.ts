@@ -30,12 +30,12 @@ export const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/",
-    name: "题库",
+    name: "根页面",
     component: HomeView,
   },
   {
     path: "/admin",
-    name: "管理员",
+    name: "管理员页面",
     component: AdminView,
     meta: {
       access: ACCESS_ENUM.ADMIN,

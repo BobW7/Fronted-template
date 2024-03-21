@@ -18,8 +18,7 @@
 </template>
 <script setup lang="ts">
 import { reactive } from "vue";
-import { UserControllerService, UserLoginRequest } from "../../../generated";
-import message from "@arco-design/web-vue/es/message";
+import { UserLoginRequest } from "../../../generated";
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
 
@@ -36,7 +35,7 @@ const store = useStore();
 /**
  * 提交表单，执行登录
  */
-const handleSubmit = async () => {
+/*const handleSubmit = async () => {
   const res = await UserControllerService.userLoginUsingPost(form);
   // 登录成功，跳转到主页
   if (res.code === 0) {
@@ -49,5 +48,5 @@ const handleSubmit = async () => {
   } else {
     message.error("登录失败," + res.message);
   }
-};
+};*/
 </script>

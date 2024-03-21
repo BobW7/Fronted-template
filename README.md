@@ -1,4 +1,4 @@
-# Fronted-template
+# Fronted - template
 
 ## Project setup
 ```

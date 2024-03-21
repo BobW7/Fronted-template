@@ -13,8 +13,7 @@
           disabled
         >
           <div class="title-bar">
-            <img class="logo" src="../assets/bLogo.png" />
-            <div class="title">BobOJ</div>
+            <div class="title">项目名称</div>
           </div>
         </a-menu-item>
         <a-menu-item v-for="item in visibleRoutes" :key="item.path">
@@ -34,7 +33,6 @@ import { useRouter } from "vue-router";
 import { computed, ref } from "vue";
 import store from "@/store";
 import checkAccess from "@/access/checkAccess";
-import ACCESS_ENUM from "@/access/accessEnum";
 
 const router = useRouter();
 
@@ -61,11 +59,10 @@ const selectedKeys = ref(["/"]);
 router.afterEach((to, from, failure) => {
   selectedKeys.value = [to.path];
 });
-/*
 setTimeout(() => {
   //用dispatch来调用store中的module中的action方法，注意路径就是:模块名/方法名
-  store.dispatch("user/getLoginUser", {});
-}, 100);*/
+  store.dispatch("user/getLoginUser", { userName: "BOB", userRole: "admin" });
+}, 2000);
 const doMenuClick = (key: string) => {
   router.push({
     path: key,
