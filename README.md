@@ -1,4 +1,4 @@
-# boboj-frontend
+# Fronted-template
 
 ## Project setup
 ```
