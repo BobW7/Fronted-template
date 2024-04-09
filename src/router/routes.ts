@@ -6,6 +6,7 @@ import ACCESS_ENUM from "@/access/accessEnum";
 import UserLayout from "@/layouts/UserLayout.vue";
 import UserLoginView from "@/views/user/UserLoginView.vue";
 import UserRegisterView from "@/views/user/UserRegisterView.vue";
+import AboutView from "@/views/AboutView.vue";
 
 export const routes: Array<RouteRecordRaw> = [
   {
@@ -53,14 +54,40 @@ export const routes: Array<RouteRecordRaw> = [
     path: "/noAuth",
     name: "无权限",
     component: NoAuthView,
+    meta: {
+      hideInMenu: true,
+    },
   },
   {
-    path: "/about",
-    name: "关于我的",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    path: "/task1",
+    name: "功能页1",
+    component: AboutView,
+    meta: {
+      access: ACCESS_ENUM.USER,
+    },
+  },
+  {
+    path: "/task2",
+    name: "功能页2",
+    component: AboutView,
+    meta: {
+      access: ACCESS_ENUM.USER,
+    },
+  },
+  {
+    path: "/task3",
+    name: "功能页3",
+    component: AboutView,
+    meta: {
+      access: ACCESS_ENUM.USER,
+    },
+  },
+  {
+    path: "/task4",
+    name: "功能页4",
+    component: AboutView,
+    meta: {
+      access: ACCESS_ENUM.USER,
+    },
   },
 ];

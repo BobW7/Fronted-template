@@ -1,7 +1,11 @@
 <template>
   <div id="userLayout">
     <a-layout style="min-height: 100vh">
-      <a-layout-header class="header"> 用户布局</a-layout-header>
+      <a-layout-header class="header">
+        <a-space>
+          <div class="title">项目名称</div>
+        </a-space>
+      </a-layout-header>
       <a-layout-content class="content">
         <router-view />
       </a-layout-content>
@@ -14,15 +18,15 @@
 
 <style scoped>
 #userLayout {
+  text-align: center;
+  background: url("https://labuladong.github.io/algo/assets/bg/10-light.svg");
 }
 
 #userLayout .header {
-  margin-bottom: 16px;
-  box-shadow: #eee 1px 1px 5px;
+  margin-top: 16px;
 }
 
 #userLayout .content {
-  background: linear-gradient(to right, #aaa, #fff);
   margin-bottom: 16px;
   padding: 20px;
 }
@@ -35,6 +39,15 @@
   left: 0;
   right: 0;
   text-align: center;
+}
+
+#userLayout .title {
+  color: #444;
+  margin-left: 16px;
+}
+
+#userLayout .logo {
+  height: 48px;
 }
 </style>
 <script setup lang="ts"></script>

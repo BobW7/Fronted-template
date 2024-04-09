@@ -43,7 +43,7 @@ const visibleRoutes = computed(() => {
     if (item.meta?.hideInMenu) {
       return false;
     }
-    // 根据权限过滤菜单
+    // 根据权限和路由过滤菜单
     if (
       !checkAccess(store.state.user.loginUser, item?.meta?.access as string)
     ) {
@@ -59,10 +59,11 @@ const selectedKeys = ref(["/"]);
 router.afterEach((to, from, failure) => {
   selectedKeys.value = [to.path];
 });
+/*
 setTimeout(() => {
   //用dispatch来调用store中的module中的action方法，注意路径就是:模块名/方法名
-  store.dispatch("user/getLoginUser", { userName: "BOB", userRole: "admin" });
-}, 2000);
+  store.dispatch("user/getLoginUser", {});
+}, 100);*/
 const doMenuClick = (key: string) => {
   router.push({
     path: key,
